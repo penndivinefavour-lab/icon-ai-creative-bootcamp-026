@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="ICON Studios bootcamp mark">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A2744"/>
+      <stop offset="1" stop-color="#6B21A8"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- 'I' glyph -->
+  <rect x="112" y="120" width="104" height="272" rx="20" fill="#F5C518"/>
+  <!-- spark / path motif -->
+  <path d="M320 104 L368 216 L472 232 L384 296 L408 408 L320 344 L232 408 L256 296 L168 232 L272 216 Z"
+        fill="#FFFFFF" opacity="0.96"/>
+  <circle cx="320" cy="240" r="20" fill="#F5C518"/>
+</svg>

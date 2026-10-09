@@ -1,0 +1,15 @@
+# Cloudflare Pages — build & deploy configuration
+# Icon AI and Creative Bootcamp '26
+#
+# This is a purely static site: no Workers, no Functions, no databases,
+# no server infrastructure. Cloudflare Pages serves the files as-is.
+#
+# Connect the GitHub repository as the source and deploy from "main".
+# Build command is intentionally empty — the static output is committed.
+
+name = "icon-ai-creative-bootcamp-026"
+compatibility_date = "2026-01-01"
+pages_build_output_dir = "."
+
+# No headers needed beyond cache hints; add long-lived caching for static
+# assets via the _headers file in this directory.

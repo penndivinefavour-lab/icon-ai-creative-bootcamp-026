@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Icon AI and Creative Bootcamp '26 — 30 Days. 5 Skills. Your Path.</title>
+  <meta name="description" content="Icon AI and Creative Bootcamp is a 30-day, mobile-first programme covering five practical skills — graphic designing, prompt engineering, image generation, AI automation and AI video generation. Learn in 30 days, build a portfolio, and earn a certificate.">
+  <meta name="author" content="ICON Studios">
+  <meta name="theme-color" content="#1A2744">
+  <link rel="canonical" href="/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Icon AI and Creative Bootcamp">
+  <meta property="og:title" content="Icon AI and Creative Bootcamp '26 — 30 Days. 5 Skills. Your Path.">
+  <meta property="og:description" content="A 30-day, mobile-first AI and creative skills programme covering five practical skills. Build a portfolio and earn a certificate.">
+  <meta property="og:image" content="/assets/img/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Icon AI and Creative Bootcamp '26 — 30 Days. 5 Skills. Your Path.">
+  <meta name="twitter:description" content="A 30-day, mobile-first AI and creative skills programme covering five practical skills. Build a portfolio and earn a certificate.">
+  <meta name="twitter:image" content="/assets/img/og-cover.png">
+
+  <!-- Favicons + manifest -->
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+  <link rel="mask-icon" href="/assets/img/mark.svg" color="#1A2744">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Fonts: self-hosted, WOFF2 subsets, preloaded for fast LCP -->
+  <link rel="preload" as="font" href="/assets/fonts/poppins-400-latin.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/assets/fonts/poppins-700-latin.woff2" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============================ 1. ANNOUNCEMENT BAR ==================== -->
+<!-- Progressive enhancement: hidden by default state handled in JS; content
+     remains in the DOM and readable with JS disabled. -->
+<div class="announcement-bar" id="announcement" hidden>
+  <div class="announcement-bar__inner">
+    <p id="announcement-text"></p>
+    <a id="announcement-link" href="#tracks">Learn more</a>
+    <button class="announcement-bar__close" id="announcement-close" type="button" aria-label="Dismiss announcement">
+      <span aria-hidden="true" style="font-size:1rem;line-height:1">&times;</span>
+    </button>
+  </div>
+</div>
+
+<!-- ================================= 2. HEADER ========================= -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="#top" aria-label="ICON Studios — home">
+      <img class="brand__mark" src="/assets/img/favicon-180.png" width="38" height="38" alt="">
+      <span class="brand__text">
+        <span class="brand__name">ICON Studios</span>
+        <span class="brand__sub">AI + Creative Bootcamp</span>
+      </span>
+    </a>
+    <span class="site-header__spacer"></span>
+    <nav class="site-header__nav" aria-label="Section shortcuts">
+      <a href="#packages">Packages</a>
+      <a href="#tracks">Tracks</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <a class="header-cta" href="#packages">Enrol now</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================================= 3. HERO ========================= -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero__grid">
+      <p class="hero__badge" id="hero-badge">ICON Studios AI + Creative Bootcamp &rsquo;26</p>
+      <h1 id="hero-title">30 Days. 5 Skills. <span class="accent">Your Path.</span></h1>
+      <p class="hero__lede" id="hero-lede">
+        A 30-day, mobile-first AI and creative skills programme built for a cohort of
+        <strong>500 creatives</strong>. Five practical tracks, daily guided practice, and
+        a portfolio you actually own.
+      </p>
+
+      <!-- Countdown: placed directly under the lede so the approved start date
+           is the first thing the eye lands on after the headline. The target
+           timestamp is read from config (campaign.bootcampStart.iso), so it is
+           timezone-safe and the date is never duplicated in markup. Numbers
+           update every second and are aria-hidden; the accessible label changes
+           only when the day count or the state changes. -->
+      <section class="countdown countdown--hero" id="countdown" aria-labelledby="countdown-label" hidden>
+        <p class="countdown__label" id="countdown-label">Bootcamp starts in</p>
+        <div class="countdown__units" id="countdown-units">
+          <div class="countdown__unit"><span class="countdown__num" id="cd-days" aria-hidden="true">00</span><span class="countdown__unit-label">Days</span></div>
+          <div class="countdown__unit"><span class="countdown__num" id="cd-hours" aria-hidden="true">00</span><span class="countdown__unit-label">Hours</span></div>
+          <div class="countdown__unit"><span class="countdown__num" id="cd-mins" aria-hidden="true">00</span><span class="countdown__unit-label">Minutes</span></div>
+          <div class="countdown__unit"><span class="countdown__num" id="cd-secs" aria-hidden="true">00</span><span="countdown__unit-label">Seconds</span></div>
+        </div>
+        <p class="countdown__date" id="countdown-date">Saturday 7 November 2026</p>
+        <p class="visually-hidden" id="countdown-live" aria-live="polite"></p>
+      </section>
+      <noscript>
+        <!-- Static fallback: the live countdown needs JavaScript, so without
+             it the approved start date is still communicated. -->
+        <p class="countdown countdown--static">
+          <span class="countdown__label">Bootcamp starts</span>
+          <span class="countdown__date">Saturday 7 November 2026</span>
+        </p>
+      </noscript>
+
+      <ul class="hero__meta" id="hero-meta">
+        <li>10-day bootcamp + 30 days of practice</li>
+        <li>5 skill tracks</li>
+        <li>Cohort of 500 creatives</li>
+        <li>Works on a phone</li>
+      </ul>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#packages" id="hero-cta-primary">View packages &amp; prices</a>
+        <a class="btn btn--ghost-light" href="#crash-course" id="hero-cta-secondary">Try the free crash course</a>
+      </div>
+      <p class="hero__price-line" id="hero-price-line">
+        <span class="hero__price" id="hero-price">From 5,000 FCFA</span>
+        <span id="hero-price-suffix">per track &middot; certificate included &middot; payment at checkout</span>
+      </p>
+
+      <p class="hero__waitlist">
+        Not ready to enrol? <a class="link--gold" href="#crash-course" id="hero-waitlist" data-waitlist>Join the waitlist group</a> and start with the free crash course.
+      </p>
+      <noscript>
+        <p class="hero__price-line">
+          <span class="hero__price">The Bootcamp begins Saturday 7 November 2026</span>
+          <span>registration opens Saturday 10 October 2026</span>
+        </p>
+      </noscript>
+      <p class="stage-badge" id="stage-badge" aria-live="polite"></p>
+    </div>
+
+    <!-- Original vector artwork: an abstract composition of connected
+         creative panels. Decorative — hidden on phones to keep the hero
+         text-first and the LCP fast; shown from tablet width. -->
+    <img class="hero__art" src="/assets/img/hero-art.svg" width="1200" height="900"
+         alt="" role="presentation" decoding="async">
+  </section>
+  <section class="proof-strip" aria-labelledby="proof-title">
+    <div class="proof-strip__inner">
+      <h2 class="sr-only" id="proof-title">Proof and results</h2>
+      <p>
+        <strong>This is a new programme.</strong>
+        We are building this cohort in public — real participant results, work and
+        testimonials will be published here as soon as they exist.
+      </p>
+      <p class="proof-state">Results &amp; testimonials: published as they arrive</p>
+    </div>
+  </section>
+
+  <!-- ==================== 5. WHAT YOU WILL CREATE ====================== -->
+  <section class="section" id="create" aria-labelledby="create-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What you will create</p>
+        <h2 id="create-title">By day 30, you leave with real work — not just lessons</h2>
+        <p class="lede">
+          Every track ends in a finished piece you can show a client, post online, or
+          keep building on. You learn by making, with feedback at each step.
+        </p>
+      </div>
+      <ul class="feature-list">
+        <li>A portfolio of finished creative work, produced on your own phone or laptop.</li>
+        <li>Reusable templates and prompt systems you can apply to paid work immediately.</li>
+        <li>A completed final project reviewed by your facilitators.</li>
+        <li>A certificate of completion when you finish the programme.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================= 6. THE FIVE TRACKS ====================== -->
+  <section class="section section--soft" id="tracks" aria-labelledby="tracks-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The five tracks</p>
+        <h2 id="tracks-title">Five skills, one path — in this order</h2>
+        <p class="lede">
+          Each track is a complete skill set. Take one, or take all five in sequence —
+          they are designed to build on each other.
+        </p>
+      </div>
+      <div class="grid grid--tracks" id="tracks-grid">
+        <!-- Track cards are generated from assets/js/config.js so prices,
+             names and order always match the single source of truth.
+             The noscript fallback below keeps the section fully readable
+             and correct with JavaScript disabled. -->
+        <noscript>
+        <article class="track-card">
+          <span class="track-card__num">1</span>
+          <div class="track-card__head"><h3>Graphic Designing</h3></div>
+          <p>Design fundamentals, layout, colour and brand-ready visuals you can produce entirely on a phone or laptop.</p>
+          <ul class="track-card__delivers">
+            <li>Design principles &amp; composition</li>
+            <li>Colour, type and hierarchy</li>
+            <li>Poster, flyer &amp; social-post workflow</li>
+            <li>A polished portfolio piece</li>
+          </ul>
+          <div class="track-card__foot"><div class="track-price"><span class="track-price__amount">6,000 FCFA</span><span class="track-price__tag track-price__tag--std">Standard</span></div></div>
+        </article>
+        <article class="track-card">
+          <span class="track-card__num">2</span>
+          <div class="track-card__head"><h3>Prompt Engineering</h3></div>
+          <p>Write precise, repeatable prompts that make AI tools produce exactly what you need, first try.</p>
+          <ul class="track-card__delivers">
+            <li>Prompt structure &amp; intent</li>
+            <li>Controlling style and detail</li>
+            <li>Iterating and fixing output</li>
+            <li>Reusable prompt templates</li>
+          </ul>
+          <div class="track-card__foot"><div class="track-price"><span class="track-price__amount">5,000 FCFA</span><span class="track-price__tag track-price__tag--std">Standard</span></div></div>
+        </article>
+        <article class="track-card">
+          <span class="track-card__num">3</span>
+          <div class="track-card__head"><h3>Image Generation</h3></div>
+          <p>Generate, edit and refine high-quality images for clients, content and products with a clear editing pipeline.</p>
+          <ul class="track-card__delivers">
+            <li>Model strengths &amp; limits</li>
+            <li>Editing and inpainting</li>
+            <li>Consistent brand visuals</li>
+            <li>A generated-image portfolio</li>
+          </ul>
+          <div class="track-card__foot"><div class="track-price"><span class="track-price__amount">5,000 FCFA</span><span class="track-price__tag track-price__tag--std">Standard</span></div></div>
+        </article>
+        <article class="track-card">
+          <span class="track-card__num">4</span>
+          <div class="track-card__head"><h3>AI Automation</h3></div>
+          <p>Automate repetitive work and build simple no-code AI workflows. Mobile-first: Android/Termux is supported and a laptop is optional — not required.</p>
+          <ul class="track-card__delivers">
+            <li>Automation fundamentals</li>
+            <li>Connecting tasks into a workflow</li>
+            <li>Running workflows from a phone</li>
+            <li>A working automation project</li>
+          </ul>
+          <div class="track-card__foot"><div class="track-price"><span class="track-price__amount">7,000 FCFA</span><span class="track-price__tag track-price__tag--std">Standard</span></div></div>
+        </article>
+        <article class="track-card">
+          <span class="track-card__num">5</span>
+          <div class="track-card__head"><h3>AI Video Generation</h3></div>
+          <p>Script, generate and edit short-form video with AI — from idea to a publishable reel.</p>
+          <ul class="track-card__delivers">
+            <li>Scripting for short video</li>
+            <li>Generation &amp; editing pipeline</li>
+            <li>Captions and packaging</li>
+            <li>A finished short-form video</li>
+          </ul>
+          <div class="track-card__foot"><div class="track-price"><span class="track-price__amount">5,000 FCFA</span><span class="track-price__tag track-price__tag--std">Standard</span></div></div>
+        </article>
+      </noscript>
+      </div>
+      <p class="stage-badge" id="tracks-stage-badge" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ==================== 7. PACKAGES (five bundles) ==================== -->
+  <!-- Five Founder-approved packages, rendered from config. Prices are locked
+       in config and shown exactly as approved. Every ENROL button maps to its
+       own package product slot (pkg-*), never to a track product. -->
+  <section class="section section--navy dark-surface" id="packages" aria-labelledby="packages-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow eyebrow--onDark">Packages</p>
+        <h2 id="packages-title">Five packages, one programme</h2>
+        <p class="lede">
+          Each package is a single enrolment covering every track it lists — one
+          price, one cohort place, and no separate checkouts. Prices are set by
+          ICON Studios and shown exactly as approved.
+        </p>
+      </div>
+      <div class="grid grid--packages" id="packages-grid"></div>
+      <noscript>
+        <ul class="grid grid--packages pkg-list">
+          <li class="pkg-card pkg-card--static">
+            <p class="pkg-card__count">2 tracks</p>
+            <h3 class="pkg-card__name">Creative Starter</h3>
+            <p class="pkg-card__positioning">The essential creative pair — design fundamentals plus AI image generation.</p>
+            <p class="pkg-skills-line">Includes: Graphic Designing, Image Generation</p>
+            <p class="pkg-price"><span class="pkg-price__amount">8,100</span> <span class="pkg-price__cur">FCFA</span></p>
+            <a class="btn btn--primary btn--block btn--pending" href="#payment">Enrol — Creative Starter</a>
+          </li>
+          <li class="pkg-card pkg-card--static">
+            <p class="pkg-card__count">2 tracks</p>
+            <h3 class="pkg-card__name">Automation Starter</h3>
+            <p class="pkg-card__positioning">Automation plus the prompt engineering that makes AI workflows reliable.</p>
+            <p class="pkg-skills-line">Includes: AI Automation, Prompt Engineering</p>
+            <p class="pkg-price"><span class="pkg-price__amount">9,000</span> <span class="pkg-price__cur">FCFA</span></p>
+            <a class="btn btn--primary btn--block btn--pending" href="#payment">Enrol — Automation Starter</a>
+          </li>
+          <li class="pkg-card pkg-card--static">
+            <p class="pkg-card__count">3 tracks</p>
+            <h3 class="pkg-card__name">Prompt Creator</h3>
+            <p class="pkg-card__positioning">Master prompt craft across text, image and video generation.</p>
+            <p class="pkg-skills-line">Includes: Prompt Engineering, Image Generation, AI Video Generation</p>
+            <p class="pkg-price"><span class="pkg-price__amount">9,550</span> <span class="pkg-price__cur">FCFA</span></p>
+            <a class="btn btn--primary btn--block btn--pending" href="#payment">Enrol — Prompt Creator</a>
+          </li>
+          <li class="pkg-card pkg-card--static">
+            <p class="pkg-card__count">3 tracks</p>
+            <h3 class="pkg-card__name">Creative AI</h3>
+            <p class="pkg-card__positioning">The full creative-AI suite — graphic design, image generation and AI video.</p>
+            <p class="pkg-skills-line">Includes: Graphic Designing, Image Generation, AI Video Generation</p>
+            <p class="pkg-price"><span class="pkg-price__amount">14,450</span> <span class="pkg-price__cur">FCFA</span></p>
+            <a class="btn btn--primary btn--block btn--pending" href="#payment">Enrol — Creative AI</a>
+          </li>
+          <li class="pkg-card pkg-card--static pkg-card--all">
+            <p class="pkg-card__count">5 tracks</p>
+            <h3 class="pkg-card__name">Full ICON</h3>
+            <p class="pkg-card__positioning">The complete Bootcamp — every one of the five tracks, start to finish.</p>
+            <p class="pkg-skills-line">Includes: Graphic Designing, Prompt Engineering, Image Generation, AI Automation, AI Video Generation</p>
+            <p class="pkg-price"><span class="pkg-price__amount">18,850</span> <span class="pkg-price__cur">FCFA</span></p>
+            <a class="btn btn--primary btn--block btn--pending" href="#payment">Enrol — Full ICON</a>
+          </li>
+        </ul>
+      </noscript>
+      <p class="packages-note" id="packages-note">
+        Every package price is set by ICON Studios and shown in XAF (FCFA). Enrolment
+        opens through Selar once registration begins.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====================== 8. FREE CRASH COURSE ======================= -->
+  <section class="section" id="crash-course" aria-labelledby="crash-title">
+    <div class="wrap">
+      <div class="crash" id="crash-panel">
+        <p class="crash__free" id="crash-badge">Free — no payment required</p>
+        <h2 id="crash-title">A free crash course to get you started</h2>
+        <p id="crash-detail">
+          A short, genuinely free introduction so you can try our teaching style before
+          the bootcamp begins. No payment, no trial expiry, no obligation. The exact
+          lessons are confirmed with the Founder and announced here.
+        </p>
+        <ul class="crash__list" id="crash-list">
+          <li>A beginner-friendly practical lesson</li>
+          <li>Works on a phone — no laptop needed</li>
+          <li>No payment or card required</li>
+        </ul>
+        <a class="btn btn--primary" id="crash-cta" href="#payment">Send me the free crash course</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ 8. PRICING =========================== -->
+  <section class="section" id="pricing" aria-labelledby="pricing-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Pricing</p>
+        <h2 id="pricing-title">Simple, honest pricing — per track</h2>
+        <p class="lede">
+          Every price is in <strong>XAF (FCFA)</strong> and <strong>includes the 10-Day
+          Bootcamp Completion Certificate</strong> — there is no separate certificate fee.
+          Payment is completed securely at Selar checkout.
+        </p>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-card__head">
+          <h2>All five tracks</h2>
+          <p id="pricing-summary">Standard prices below. Launch offers appear here once their dates are confirmed.</p>
+        </div>
+        <ul class="price-rows" id="price-rows">
+          <!-- Generated from config.js; noscript fallback keeps the approved
+               standard prices visible with JavaScript disabled. -->
+          <noscript>
+        <li class="price-row"><span class="price-row__name">1. Graphic Designing <small>certificate included</small></span><span class="price-row__amount">6,000 FCFA</span></li>
+        <li class="price-row"><span class="price-row__name">2. Prompt Engineering <small>certificate included</small></span><span class="price-row__amount">5,000 FCFA</span></li>
+        <li class="price-row"><span class="price-row__name">3. Image Generation <small>certificate included</small></span><span class="price-row__amount">5,000 FCFA</span></li>
+        <li class="price-row"><span class="price-row__name">4. AI Automation <small>certificate included</small></span><span class="price-row__amount">7,000 FCFA</span></li>
+        <li class="price-row"><span class="price-row__name">5. AI Video Generation <small>certificate included</small></span><span class="price-row__amount">5,000 FCFA</span></li>
+      </noscript>
+        </ul>
+        <p class="price-note" id="pricing-note">
+          Payment is processed by Selar. The final currency and the exact amount you pay
+          are shown at Selar checkout, where Selar determines any conversion and fees.
+        </p>
+      </div>
+
+      <div class="certificate-box" id="certificate-box">
+        <p id="certificate-note">
+          <strong>Certificate included.</strong> The 10-Day Bootcamp Completion
+          Certificate is incorporated into every registration price — there is no
+          separate certificate fee to pay.
+        </p>
+      </div>
+      <p class="stage-badge" id="pricing-stage-badge" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ========================= 9. WHO IT IS FOR ======================== -->
+  <!-- Pain-point led, not demographic led: name the real frustration first,
+       then show how the bootcamp resolves it. -->
+  <section class="section section--soft" id="who" aria-labelledby="who-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Who it is for</p>
+        <h2 id="who-title">If any of this sounds like you, this is your programme</h2>
+        <p class="lede">
+          You do not need a laptop, a design degree, or prior AI experience. You need a
+          phone, data, and the willingness to practise daily.
+        </p>
+      </div>
+      <div class="grid grid--pain" id="pain-grid">
+        <div class="card">
+          <h3>Quality images, not guesswork</h3>
+          <p>You generate images and the results feel random or low quality. Learn the editing pipeline that turns a prompt into work you can actually use.</p>
+        </div>
+        <div class="card">
+          <h3>AI inside your design workflow</h3>
+          <p>You already design and want AI to speed up layout, colour and ideation instead of starting every brief from scratch.</p>
+        </div>
+        <div class="card">
+          <h3>Practical AI for your business</h3>
+          <p>You run a business and need AI to solve real problems — content, visuals, customer response — not another tool you never open.</p>
+        </div>
+        <div class="card">
+          <h3>Less repetitive work</h3>
+          <p>You lose hours to the same small tasks every week. Learn to automate them, and to run those automations from a phone.</p>
+        </div>
+        <div class="card">
+          <h3>Better video, faster</h3>
+          <p>You want short-form video that looks professional but editing takes you all day. Learn a generation and editing pipeline that ends in a publishable reel.</p>
+        </div>
+        <div class="card">
+          <h3>Tools that never become work</h3>
+          <p>You know individual AI tools but struggle to turn them into a finished piece. Learn the full path from idea to completed, portfolio-ready output.</p>
+        </div>
+      </div>
+      <div class="split">
+        <div class="split__panel">
+          <h3>This is for you if</h3>
+          <ul class="feature-list">
+            <li>You create content, designs or video and want to move faster with AI.</li>
+            <li>You are starting out and want a structured, guided first 30 days.</li>
+            <li>You learn best by doing, with feedback from people ahead of you.</li>
+            <li>You want finished work you can show clients or employers.</li>
+          </ul>
+        </div>
+        <div class="split__panel">
+          <h3>This is not for you if</h3>
+          <ul class="feature-list">
+            <li>You want a passive course with no practice or project work.</li>
+            <li>You are looking for a get-rich-quick or guaranteed-income promise.</li>
+            <li>You cannot commit roughly an hour a day for 30 days.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 10. BENEFITS / OUTCOMES =================== -->
+  <section class="section section--navy dark-surface" id="benefits" aria-labelledby="benefits-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Benefits &amp; outcomes</p>
+        <h2 id="benefits-title">What changes after 30 days</h2>
+      </div>
+      <div class="grid grid--2">
+        <div class="card card--accent">
+          <h3>Practical skill, not theory</h3>
+          <p>Each track is built around finished output. You leave with work, not just notes.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>Mobile-first by design</h3>
+          <p>Every workflow is taught so it runs on a phone. A laptop is optional, never required.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>Faster, more confident output</h3>
+          <p>Reusable prompt systems and templates shorten the distance between idea and finished piece.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>A real portfolio</h3>
+          <p>Completed pieces across your tracks, reviewed by facilitators, ready to show.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 11. LEARNING FORMAT ======================= -->
+  <section class="section" id="format" aria-labelledby="format-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Learning format</p>
+        <h2 id="format-title">How the 30 days actually work</h2>
+      </div>
+      <div class="split">
+        <div class="split__panel">
+          <h3>Structure</h3>
+          <ul class="feature-list">
+            <li>30 days of guided practice, organised into five skill tracks.</li>
+            <li>The core bootcamp runs for 10 days, from Saturday 7 November 2026.</li>
+            <li>Each day pairs a recorded session with a practical task you finish and share.</li>
+            <li>A final project per track, reviewed by facilitators.</li>
+          </ul>
+        </div>
+        <div class="split__panel">
+          <h3>What you need</h3>
+          <ul class="feature-list">
+            <li>A smartphone with internet access — that is the only requirement.</li>
+            <li>An Android device can be used for the AI Automation track; a laptop is optional.</li>
+            <li>Roughly one focused hour per day for 30 days.</li>
+            <li>A willingness to publish imperfect work and improve it.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= 11b. THE 10-DAY PROGRAMME (timetable-ready) ========= -->
+  <!-- Structure + delivery explanation. The day-by-day timetable is config-
+       driven (programme.tenDay.timetable) and intentionally empty until the
+       Founder supplies the final schedule; the empty state below is shown
+       meanwhile. Dates are derived from the configured start date. -->
+  <section class="section section--soft" id="ten-day" aria-labelledby="ten-day-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The 10-day programme</p>
+        <h2 id="ten-day-title">Ten days of structured learning and daily practice</h2>
+        <p class="lede">
+          The bootcamp itself runs for ten days, starting Saturday 7 November 2026. Each
+          day combines a recorded, structured learning session with a practical task — so
+          you learn, then immediately make something with it.
+        </p>
+      </div>
+      <ul class="feature-list">
+        <li>A short recorded learning session each day, paced for phone viewing.</li>
+        <li>A practical task every day, designed to be finished and shared.</li>
+        <li>Teaching materials, notes, recordings and updates delivered through the <a href="#community">private Telegram community</a>.</li>
+        <li>The same essential materials available through a private Google Drive arrangement if you cannot use Telegram.</li>
+      </ul>
+      <div class="grid grid--days" id="timetable-grid"></div>
+      <p class="empty-state" id="timetable-empty">
+        <span class="empty-state__icon" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        </span>
+        The day-by-day timetable is confirmed with the Founder and published here before the bootcamp begins.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== 12. CURRICULUM PREVIEWS ====================== -->
+  <section class="section section--soft" id="curriculum" aria-labelledby="curriculum-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Curriculum preview</p>
+        <h2 id="curriculum-title">A preview of what each track covers</h2>
+        <p class="lede">
+          A taste of the progression in each track — the full day-by-day outline is
+          shared with enrolled participants.
+        </p>
+      </div>
+      <div class="grid grid--2" id="curriculum-grid">
+        <!-- Generated from config.js; noscript fallback mirrors the same
+             track outcomes with JavaScript disabled. -->
+        <noscript>
+        <article class="card">
+          <h3 style="font-size:1.0625rem">Graphic Designing</h3>
+          <ol style="padding-left:20px;margin:0;font-size:.9375rem;color:var(--ink-700);display:grid;gap:6px">
+            <li>Design principles &amp; composition</li>
+            <li>Colour, type and hierarchy</li>
+            <li>Poster, flyer &amp; social-post workflow</li>
+            <li>A polished portfolio piece</li>
+          </ol>
+        </article>
+        <article class="card">
+          <h3 style="font-size:1.0625rem">Prompt Engineering</h3>
+          <ol style="padding-left:20px;margin:0;font-size:.9375rem;color:var(--ink-700);display:grid;gap:6px">
+            <li>Prompt structure &amp; intent</li>
+            <li>Controlling style and detail</li>
+            <li>Iterating and fixing output</li>
+            <li>Reusable prompt templates</li>
+          </ol>
+        </article>
+        <article class="card">
+          <h3 style="font-size:1.0625rem">Image Generation</h3>
+          <ol style="padding-left:20px;margin:0;font-size:.9375rem;color:var(--ink-700);display:grid;gap:6px">
+            <li>Model strengths &amp; limits</li>
+            <li>Editing and inpainting</li>
+            <li>Consistent brand visuals</li>
+            <li>A generated-image portfolio</li>
+          </ol>
+        </article>
+        <article class="card">
+          <h3 style="font-size:1.0625rem">AI Automation</h3>
+          <ol style="padding-left:20px;margin:0;font-size:.9375rem;color:var(--ink-700);display:grid;gap:6px">
+            <li>Automation fundamentals</li>
+            <li>Connecting tasks into a workflow</li>
+            <li>Running workflows from a phone</li>
+            <li>A working automation project</li>
+          </ol>
+        </article>
+        <article class="card">
+          <h3 style="font-size:1.0625rem">AI Video Generation</h3>
+          <ol style="padding-left:20px;margin:0;font-size:.9375rem;color:var(--ink-700);display:grid;gap:6px">
+            <li>Scripting for short video</li>
+            <li>Generation &amp; editing pipeline</li>
+            <li>Captions and packaging</li>
+            <li>A finished short-form video</li>
+          </ol>
+        </article>
+      </noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== 13. IMAGE GENERATION GALLERY ===================== -->
+  <!-- Data-driven from config (gallery.items). Intentionally empty until the
+       Founder supplies official ICON examples — never invented student work.
+       Adding an image is one config entry; no markup change is needed. -->
+  <section class="section" id="gallery" aria-labelledby="gallery-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Image Generation track</p>
+        <h2 id="gallery-title">The generation gallery</h2>
+        <p class="lede">
+          Work produced inside the Image Generation track will be shown here. These will
+          be official ICON examples published as the cohort progresses.
+        </p>
+      </div>
+      <div class="gallery" id="gallery-grid"></div>
+      <p class="empty-state" id="gallery-empty">
+        <span class="empty-state__icon" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="10" r="2.5"/><path d="m5 18 4-4 3 3 3-3 4 4"/></svg>
+        </span>
+        Official ICON generation examples land here during the campaign.
+      </p>
+    </div>
+  </section>
+
+  <!-- =================== 14. SAMPLE PROJECTS ========================== -->
+  <!-- Data-driven from config (projects.items). Empty by design: the Founder
+       adds real campaign projects here as they are created. -->
+  <section class="section section--soft" id="projects" aria-labelledby="projects-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Showcase</p>
+        <h2 id="projects-title">Sample projects</h2>
+        <p class="lede">
+          Real projects created for and during the Bootcamp will be added here, track by
+          track — starting once the campaign opens.
+        </p>
+      </div>
+      <div class="projects" id="projects-grid"></div>
+      <p class="empty-state" id="projects-empty">
+        <span class="empty-state__icon" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 6h16M4 12h10M4 18h7"/><circle cx="18" cy="16" r="3"/></svg>
+        </span>
+        Sample projects created during the campaign will be added here, track by track.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 15. MID-PAGE ENROL (conversion point) =============== -->
+  <section class="section section--navy dark-surface" id="enrol-mid" aria-labelledby="enrol-mid-title">
+    <div class="wrap enrol-mid">
+      <div>
+        <h2 id="enrol-mid-title">Ready to build your first portfolio piece?</h2>
+        <p class="lede">
+          Pick a single track or a five-skill package — both enrol through Selar, and
+          the price you see is the full price in FCFA.
+        </p>
+      </div>
+      <div class="enrol-mid__actions">
+        <a class="btn btn--primary" href="#packages">Enrol now</a>
+        <a class="btn btn--ghost-light" href="#crash-course" id="enrol-mid-waitlist" data-waitlist>Join the waitlist group</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================== 16. PRIVATE COMMUNITY / DELIVERY =============== -->
+  <!-- Learning delivery system: private Telegram community with per-track
+       sub-channels + a private Google Drive fallback. Both links are private
+       and restricted to registered participants, so they are NEVER published
+       here — they come from config once verified. Materials are not for
+       resale or redistribution. -->
+  <section class="section" id="community" aria-labelledby="community-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Community &amp; delivery</p>
+        <h2 id="community-title">Where the learning happens</h2>
+        <p class="lede">
+          Once you are registered, the whole programme runs inside a private community
+          built for the cohort — not in scattered emails or public groups.
+        </p>
+      </div>
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>Private Telegram community</h3>
+          <p>
+            Registered participants get access to a private Telegram community with
+            dedicated sub-channels for each track. Teaching materials, announcements,
+            notes, recordings, resources and important updates are all shared there.
+          </p>
+          <ul class="feature-list">
+            <li>Separate sub-channels for each of the five tracks</li>
+            <li>Announcements, notes and recordings in one place</li>
+            <li>Ask questions and share your daily work with the cohort</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Google Drive fallback</h3>
+          <p>
+            If you cannot use Telegram, the same essential learning materials are made
+            available through a private Google Drive arrangement, so you never miss the
+            programme because of the platform it is delivered on.
+          </p>
+          <ul class="feature-list">
+            <li>The same essential materials, privately arranged</li>
+            <li>Access is restricted to registered participants</li>
+            <li>Nothing public, nothing behind a paywall you have not already paid for</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:24px">
+        <p>
+          <strong>Private to participants.</strong> Access to the community and the
+          learning materials is restricted to registered participants. Paid course
+          materials are private and are not intended for resale or redistribution —
+          please keep them within the cohort.
+        </p>
+      </div>
+      <p style="margin-top:24px">
+        <a class="btn btn--ghost" id="community-cta" href="#crash-course">Join the waitlist group</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- =============== 16b. THE 10-DAY CHALLENGE (separate) ============== -->
+  <!-- A distinct, limited-space practical opportunity. The fee and selection
+       process are NOT approved yet, so no number or rule is invented: the fee
+       shows the pending state from config and the CTA stays safe. Registering
+       for the bootcamp does NOT grant the challenge certificate. -->
+  <section class="section section--navy dark-surface" id="challenge" aria-labelledby="challenge-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow eyebrow--onDark">The 10-Day Challenge</p>
+        <h2 id="challenge-title">Build something real — and earn a separate certificate</h2>
+        <p class="lede">
+          Alongside the bootcamp there is a separate, practical 10-day challenge where
+          selected participants turn what they have learned into a real, finished piece
+          of work.
+        </p>
+      </div>
+      <div class="split">
+        <div class="split__panel">
+          <h3>What it is</h3>
+          <ul class="feature-list">
+            <li>A focused, practical build over ten days, with guidance along the way.</li>
+            <li>A separate 10-Day Challenge certificate on successful completion.</li>
+            <li>Work that can anchor — or lead — your portfolio.</li>
+          </ul>
+          <p class="callout callout--onDark">
+            <strong>Limited spaces.</strong> The challenge has a limited number of places
+            and its own entry requirements — registering for the bootcamp does not
+            guarantee a place, and the challenge certificate is not issued automatically.
+          </p>
+        </div>
+        <div class="split__panel">
+          <h3>Entry &amp; fee</h3>
+          <p>
+            The challenge is separate from normal bootcamp registration. The exact fee
+            and the selection process are announced with the official challenge rules.
+          </p>
+          <p class="challenge-fee" data-challenge-fee>
+            The exact challenge fee is announced with the official challenge rules.
+          </p>
+          <p>
+            <a class="btn btn--primary" data-challenge-cta href="#payment">Apply for the challenge</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================== 16c. AFFILIATE / REFERRAL PROGRAM ============== -->
+  <!-- Referral program: refer qualified paying participants and earn a
+       commission. Commission %, payout rules, eligibility, tracking and
+       payment schedule are ALL pending the official affiliate terms, so none
+       is invented. applyUrl is empty until the official destination exists. -->
+  <section class="section" id="affiliate" aria-labelledby="affiliate-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Affiliate program</p>
+        <h2 id="affiliate-title">Earn while you share the Bootcamp</h2>
+        <p class="lede">
+          You do not need to enrol in the bootcamp yourself to earn from it. Refer
+          qualified paying participants and receive a commission under the official
+          affiliate terms.
+        </p>
+      </div>
+      <div class="split">
+        <div class="split__panel">
+          <h3>How it works</h3>
+          <ol class="pay-steps">
+            <li><strong>Share the bootcamp</strong><span>Use your affiliate identity to introduce the programme to people who would genuinely benefit.</span></li>
+            <li><strong>They register and pay</strong><span>Someone you refer registers and completes payment through Selar.</span></li>
+            <li><strong>You earn a commission</strong><span>You receive a commission according to the official affiliate terms.</span></li>
+          </ol>
+          <p style="margin-top:16px;font-size:0.9375rem;color:var(--ink-500)">
+            Open to students, creators, friends, marketers, community members and other
+            eligible referrers. The affiliate program is separate from normal bootcamp
+            registration.
+          </p>
+        </div>
+        <div class="split__panel">
+          <div class="callout">
+            <p>
+              <strong>Affiliate terms to be confirmed.</strong>
+              The commission rate, payout rules, eligibility requirements, tracking
+              system and payment schedule are published here once the official affiliate
+              terms are confirmed — no figure is quoted before then.
+            </p>
+          </div>
+          <p style="margin-top:24px">
+            <a class="btn btn--primary" data-affiliate-cta href="#payment">Become an ICON Affiliate</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= 14. FACILITATORS (neutral, unannounced) ============= -->
+  <section class="section section--soft" id="facilitators" aria-labelledby="facilitators-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Facilitators &amp; mentors</p>
+        <h2 id="facilitators-title">Facilitator announcements coming soon</h2>
+        <p class="lede">
+          Our facilitators and mentors will be introduced here, with their real names and
+          credentials, as each one is confirmed. Nobody is listed until they are.
+        </p>
+      </div>
+      <div class="neutral-grid" id="facilitators-grid">
+        <div class="neutral-card">
+          <div class="neutral-card__avatar" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.6 3.9-5 7-5s5.8 1.4 7 5"/></svg>
+          </div>
+          <h3>Facilitator</h3>
+          <p>To be announced</p>
+        </div>
+        <div class="neutral-card">
+          <div class="neutral-card__avatar" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.6 3.9-5 7-5s5.8 1.4 7 5"/></svg>
+          </div>
+          <h3>Mentor</h3>
+          <p>To be announced</p>
+        </div>
+        <div class="neutral-card">
+          <div class="neutral-card__avatar" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.6 3.9-5 7-5s5.8 1.4 7 5"/></svg>
+          </div>
+          <h3>Mentor</h3>
+          <p>To be announced</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== 15. CERTIFICATES ===================== -->
+  <!-- TWO distinct certificates (config.certificates):
+       1. 10-Day Bootcamp Completion Certificate — INCLUDED in every
+          registration price (certificate-inclusive pricing, D-008).
+       2. 10-Day Challenge Certificate — earned separately through the limited
+          10-Day Challenge; never implied to be automatic with registration. -->
+  <section class="section" id="certificate" aria-labelledby="certificate-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Certificates</p>
+        <h2 id="certificate-title">Two certificates, each earned differently</h2>
+        <p class="lede">
+          The certificate cost is incorporated into every registration price — you never
+          pay a separate certificate fee for the bootcamp.
+        </p>
+      </div>
+      <div class="grid grid--2">
+        <div class="card card--accent">
+          <p class="card__tag">Included in your registration</p>
+          <h3>10-Day Bootcamp Completion Certificate</h3>
+          <p>
+            Issued when you complete the bootcamp. Its cost is already incorporated into
+            every track and package price, so there is nothing extra to pay and no
+            separate checkout for it.
+          </p>
+        </div>
+        <div class="card card--accent">
+          <p class="card__tag">Earned separately</p>
+          <h3>10-Day Challenge Certificate</h3>
+          <p>
+            A separate certificate, earned by successfully participating in and completing
+            the limited <a href="#challenge">10-Day Challenge</a>. Registering for the
+            bootcamp does not automatically grant it — it is awarded through the challenge
+            itself.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 16. PAYMENT EXPLAINED ===================== -->
+  <section class="section section--soft" id="payment" aria-labelledby="payment-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Payment explained</p>
+        <h2 id="payment-title">How payment works — and what we never do</h2>
+      </div>
+      <div class="split">
+        <div class="split__panel">
+          <h3>Step by step</h3>
+          <ol class="pay-steps">
+            <li><strong>Choose your track or package</strong><span>Pick a single track or one of the five packages from the pricing and packages sections.</span></li>
+            <li><strong>Go to Selar checkout</strong><span>Every paid enrolment button opens the verified Selar product page for that specific track or package, where payment is processed securely.</span></li>
+            <li><strong>Pay at checkout</strong><span>International payments are processed through Selar. The final currency and the exact amount you pay are shown there, where Selar determines any conversion and fees.</span></li>
+            <li><strong>Selar confirms your enrolment</strong><span>This website does not verify payments — Selar confirms your enrolment and sends your access details, including your private community access.</span></li>
+          </ol>
+        </div>
+        <div>
+          <div class="callout">
+            <p>
+              <strong>We never see or store your card details.</strong>
+              Payment happens entirely on Selar, the payment processor. We do not handle
+              your card information, and we cannot charge you ourselves.
+            </p>
+          </div>
+          <div class="callout" style="margin-top:16px;background:var(--purple-tint)">
+            <p>
+              <strong>All prices on this site are in XAF (FCFA).</strong>
+              We do not list converted amounts in other currencies. If Selar converts at
+              checkout, the exact payable amount is shown by Selar before you pay.
+            </p>
+          </div>
+          <h3 style="margin-top:32px">Talk to us first</h3>
+          <ul class="feature-list">
+            <li>Questions before you pay? Message us — we answer before you spend anything.</li>
+            <li><a href="tel:+237675140957" data-tel>Call or WhatsApp: +237 675 140 957</a></li>
+            <li><a href="mailto:iconstudiosyde@gmail.com" data-mail>Email: iconstudiosyde@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================= 17. FAQ ======================== -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Questions you may have</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>Do I need a laptop?</summary>
+          <p>No. The programme is mobile-first: every workflow is taught so it runs on a smartphone. In the AI Automation track an Android device can be used directly, and a laptop is optional — never required.</p>
+        </details>
+        <details class="faq">
+          <summary>What exactly do I get in the free crash course?</summary>
+          <p>A short, genuinely free practical lesson so you can judge our teaching style before the bootcamp. There is no trial expiry, no card, and no obligation — it does not turn into a paid subscription. The exact lessons are confirmed with the Founder and announced on the page.</p>
+        </details>
+        <details class="faq">
+          <summary>How much does the bootcamp cost?</summary>
+          <p>Each track is priced individually, always in XAF (FCFA), and every price includes the 10-Day Bootcamp Completion Certificate. The five tracks are Graphic Designing 6,000 FCFA, Prompt Engineering 5,000 FCFA, Image Generation 5,000 FCFA, AI Automation 7,000 FCFA, and AI Video Generation 5,000 FCFA. Five packages run from 8,100 to 18,850 FCFA. Launch offers are applied only while a confirmed offer window is running, and the active price is always shown on the pricing card.</p>
+        </details>
+        <details class="faq">
+          <summary>Are the launch discounts running right now?</summary>
+          <p>Only if a confirmed offer window is live. Launch offers are scheduled in three stages — 20%, then 10%, then 5% off — and each stage only appears between its confirmed start and end dates. When no stage is active, the site shows standard prices and no discount is claimed.</p>
+        </details>
+        <details class="faq">
+          <summary>How do I pay?</summary>
+          <p>Every paid enrolment button opens our verified Selar product page, where payment is processed securely. International payments are processed through Selar; the final currency and the exact amount you pay are shown at Selar checkout, where Selar determines any conversion and fees.</p>
+        </details>
+        <details class="faq">
+          <summary>Can I pay in another currency?</summary>
+          <p>We list prices in XAF (FCFA) only and do not publish converted amounts. If conversion applies to your payment, Selar handles it and shows you the exact payable amount at checkout before you confirm.</p>
+        </details>
+        <details class="faq">
+          <summary>Is the certificate included?</summary>
+          <p>Yes. The 10-Day Bootcamp Completion Certificate is included in every track and package registration price — there is no separate certificate fee. A second, separate 10-Day Challenge Certificate is earned by successfully completing the limited 10-Day Challenge, and is not issued automatically with bootcamp registration.</p>
+        </details>
+        <details class="faq">
+          <summary>What is the 10-Day Challenge?</summary>
+          <p>A separate, practical 10-day build where selected participants turn what they have learned into a real, finished piece of work. It has a limited number of places and its own entry requirements, so registering for the bootcamp does not guarantee a place. The exact fee and selection process are announced with the official challenge rules.</p>
+        </details>
+        <details class="faq">
+          <summary>Where do I get the lessons and materials?</summary>
+          <p>Registered participants get access to a private Telegram community with dedicated sub-channels for each track, where teaching materials, notes, recordings, announcements and resources are shared. If you cannot use Telegram, the same essential materials are available through a private Google Drive arrangement. Access is restricted to registered participants, and paid materials are not for resale or redistribution.</p>
+        </details>
+        <details class="faq">
+          <summary>Can I earn by referring people?</summary>
+          <p>Yes. The ICON Bootcamp Affiliate Program lets you refer qualified paying participants and earn a commission — you do not need to enrol in the bootcamp yourself to take part. The commission rate, payout rules and eligibility are published once the official affiliate terms are confirmed. The affiliate program is separate from normal bootcamp registration.</p>
+        </details>
+        <details class="faq">
+          <summary>What are the packages?</summary>
+          <p>Five packages combine tracks into single enrolments: Creative Starter (8,100 FCFA), Automation Starter (9,000 FCFA), Prompt Creator (9,550 FCFA), Creative AI (14,450 FCFA) and Full ICON (18,850 FCFA), which includes all five tracks. Each package price is set by ICON Studios and shown exactly as approved.</p>
+        </details>
+        <details class="faq">
+          <summary>How does the website know my payment succeeded?</summary>
+          <p>It does not. Selar confirms your enrolment and sends your access details. This website never claims to verify payments, and we never ask you to send card details to us.</p>
+        </details>
+        <details class="faq">
+          <summary>What if I cannot attend live sessions?</summary>
+          <p>Lessons are short and designed for phone viewing, and live sessions are there to unblock you — the practice and projects are what matter. If you miss a session, you can continue at your own pace within the 30 days.</p>
+        </details>
+        <details class="faq">
+          <summary>How much time do I need each day?</summary>
+          <p>Roughly one focused hour a day for 30 days. Consistency matters far more than long sessions — the programme is built around short daily practice.</p>
+        </details>
+        <details class="faq">
+          <summary>Do I need prior design or AI experience?</summary>
+          <p>No. The tracks start from the fundamentals and assume nothing. If you already create content, you will simply move faster through the opening days.</p>
+        </details>
+        <details class="faq">
+          <summary>Can I take just one track?</summary>
+          <p>Yes. Each track is complete on its own and priced individually. The five tracks are designed to build on each other, but you choose what fits your goals and budget.</p>
+        </details>
+        <details class="faq">
+          <summary>Who are the facilitators?</summary>
+          <p>Facilitators and mentors are introduced on the page with their real names and credentials as each one is confirmed. Nobody is listed before they are, so you will not see unverified names or invented credentials.</p>
+        </details>
+        <details class="faq">
+          <summary>How do I contact you?</summary>
+          <p>Call or WhatsApp <a href="tel:+237675140957" data-tel>+237 675 140 957</a>, or email <a href="mailto:iconstudiosyde@gmail.com" data-mail>iconstudiosyde@gmail.com</a>. We answer questions before you pay anything.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= 18. FINAL CTA ====================== -->
+  <section class="section" id="enrol" aria-labelledby="final-cta-title">
+    <div class="wrap">
+      <div class="final-cta">
+        <h2 id="final-cta-title">30 days from today, you could have five new skills</h2>
+        <p>
+          Start with the track that fits you. Prices are per track, always in XAF, and
+          payment is completed securely at Selar checkout.
+        </p>
+        <a class="btn btn--primary" id="final-cta" href="#pricing">Enrol now</a>
+        <p class="final-cta__note">
+          Or start free with the <a href="#crash-course" style="color:var(--gold);font-weight:600">crash course</a> — no payment required.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Floating contact rail — WhatsApp + Ask ICON. Positioned above the sticky
+     mobile enrol bar and respects safe-area insets. Destinations come from
+     config; until a verified WhatsApp URL exists the button falls back to the
+     verified email and can never open an invented deep link. -->
+<div class="float-rail" id="float-rail">
+  <button type="button" class="float-btn float-btn--assistant" id="assistant-open"
+          aria-label="Ask ICON — Bootcamp FAQ assistant" aria-expanded="false" aria-controls="assistant">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+      <path d="M21 12a8 8 0 0 1-8 8H8l-4 3v-4.6A8 8 0 0 1 13 4a8 8 0 0 1 8 8Z"/><path d="M9.5 12h.01M13 12h.01M16.5 12h.01"/>
+    </svg>
+    <span class="float-btn__text">Ask ICON</span>
+  </button>
+  <a class="float-btn float-btn--whatsapp" id="whatsapp-float" href="mailto:iconstudiosyde@gmail.com"
+     aria-label="Chat with ICON Studios on WhatsApp" rel="noopener" target="_blank">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.11.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.39c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/>
+    </svg>
+    <span class="float-btn__text">WhatsApp</span>
+  </a>
+</div>
+
+<!-- Ask ICON — deterministic local FAQ assistant. No backend, no AI API: it
+     answers only from the config knowledge base and escalates unknown
+     questions to WhatsApp/email. aria-expanded/controls on the toggle above. -->
+<section class="assistant" id="assistant" role="dialog" aria-modal="false" aria-labelledby="assistant-title" hidden>
+  <header class="assistant__head">
+    <div>
+      <h2 id="assistant-title">Ask ICON</h2>
+      <p class="assistant__sub" id="assistant-sub">Instant answers about the Bootcamp</p>
+    </div>
+    <button type="button" class="assistant__close" id="assistant-close" aria-label="Close Ask ICON">
+      <span aria-hidden="true" style="font-size:1.125rem;line-height:1">&times;</span>
+    </button>
+  </header>
+  <div class="assistant__log" id="assistant-log" role="log" aria-live="polite" aria-label="Assistant conversation"></div>
+  <p class="assistant__hint" id="assistant-hint">Answers come from published Bootcamp info. Anything unconfirmed is escalated to ICON directly.</p>
+  <form class="assistant__form" id="assistant-form">
+    <label class="visually-hidden" for="assistant-input">Ask a question about the Bootcamp</label>
+    <input type="text" id="assistant-input" autocomplete="off" placeholder="e.g. What are the packages?" required>
+    <button class="btn btn--primary" type="submit">Ask</button>
+  </form>
+</section>
+
+<!-- Mobile sticky CTA — JS-gated, hidden over Pricing and Final CTA -->
+<div class="sticky-cta" id="sticky-cta" role="region" aria-label="Quick enrol">
+  <span class="sticky-cta__text">
+    <span class="sticky-cta__label" id="sticky-cta-label">Enrol — from 5,000 FCFA</span>
+    <span class="sticky-cta__price" id="sticky-cta-price">per track · certificate included</span>
+  </span>
+  <a class="btn btn--primary" id="sticky-cta-button" href="#pricing">Enrol</a>
+</div>
+
+<!-- ================================= FOOTER =========================== -->
+<footer class="site-footer dark-surface">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h3>ICON Studios</h3>
+        <p>
+          The AI + Creative Bootcamp &rsquo;26 — a 30-day, mobile-first programme covering
+          five practical skills, built for a cohort of 500 creatives.
+        </p>
+        <p style="font-size:0.8125rem;color:rgba(255,255,255,0.55)">
+          Programme details and dates are confirmed before publication. Nothing on this
+          page is a claim of verified student results.
+        </p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#tracks">The five tracks</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#ten-day">The 10-day programme</a></li>
+          <li><a href="#challenge">10-Day Challenge</a></li>
+          <li><a href="#community">Community &amp; delivery</a></li>
+          <li><a href="#affiliate">Affiliate program</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#projects">Sample projects</a></li>
+          <li><a href="#crash-course">Free crash course</a></li>
+          <li><a href="#certificate">Certificates</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#payment">Payment explained</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <div class="footer-contact">
+          <a href="tel:+237675140957" data-tel>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .8 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.4 1.9.7 2.9.8a2 2 0 0 1 1.7 2z"/></svg>
+            +237 675 140 957
+          </a>
+          <a href="mailto:iconstudiosyde@gmail.com">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            iconstudiosyde@gmail.com
+          </a>
+          <a id="footer-whatsapp" href="mailto:iconstudiosyde@gmail.com">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 ICON Studios. All rights reserved.</span>
+      <ul>
+        <li><a href="/legal/privacy.html">Privacy</a></li>
+        <li><a href="/legal/terms.html">Terms</a></li>
+        <li><a href="/legal/refund.html">Refund policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/config.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

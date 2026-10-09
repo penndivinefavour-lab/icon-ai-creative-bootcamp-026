@@ -1,0 +1,7 @@
+# robots.txt — Icon AI and Creative Bootcamp '26
+# GitHub is the source of truth; static output deploys from the main branch.
+User-agent: *
+Allow: /
+
+# Sitemap location (adjust the host when the final domain is confirmed)
+Sitemap: /sitemap.xml
